@@ -29,6 +29,11 @@
     overflow: hidden;
 }
 
+.project-image-placeholder.item-type-pdf {
+    background: linear-gradient(45deg, #FF512F, #DD2476);
+    /* Distinct gradient for PDFs */
+}
+
 .project-overlay {
     position: absolute;
     top: 0;
