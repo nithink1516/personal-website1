@@ -22,14 +22,14 @@ const Projects = () => {
                             link: "https://assets.nextleap.app/submissions/ProductTeardown-fd7865c6-bb46-4637-a41c-d99075d368f4.pdf",
                             tags: ["Product", "Strategy"],
                             summary: "Detailed product teardown of Navi UPI’s Rewards feature, analyzing user experience and proposing a feature improvement.",
-                            shortDescription: "Detailed product teardown analysis"
+                            shortDescription: "Navi Rewards"
                         },
                         {
-                            title: "Swiggy LIP2",
+                            title: "Product Teardown",
                             link: "https://assets.nextleap.app/submissions/Swiggy-LIP2-f917182b-d0ac-47f1-ac7e-ce58b17b426f.pdf",
                             tags: ["Food Tech", "Growth"],
                             summary: "Product teardown of Swiggy’s Incognito Mode feature, evaluating user experience and proposing a UX improvement.",
-                            shortDescription: "Swiggy growth strategy proposal"
+                            shortDescription: "Swiggy Incognito Mode"
                         },
                         {
                             title: "Expense Ease",
@@ -39,25 +39,25 @@ const Projects = () => {
                             shortDescription: "Expense tracking solution"
                         },
                         {
-                            title: "Date Planning Assistant",
-                            link: "https://assets.nextleap.app/submissions/LIP3-DatePlanningAssistant-f4390a7a-a0fc-4a2c-84fb-96f0c40940dd.pdf",
-                            tags: ["Lifestyle", "Planning"],
-                            summary: "Concept and UX design of a Date Planning AI Assistant feature for dating apps, focused on streamlining planning and coordination.",
-                            shortDescription: "Smart date planning tool"
-                        },
-                        {
-                            title: "LIP 45",
+                            title: "Analysing User Experiences",
                             link: "https://assets.nextleap.app/submissions/LIP45-627ba169-13db-46ea-93ed-dd16491da01c.pdf",
                             tags: ["Strategy", "Case Study"],
                             summary: "Heuristic evaluation of Blinkit’s user experience across core flows, identifying usability gaps through Jakob Nielsen’s principles.",
-                            shortDescription: "Strategic business case study"
+                            shortDescription: "BlinkIt | Usability Heuristics"
                         },
                         {
-                            title: "Credit on UPI Market",
+                            title: "Building Wireframe",
+                            link: "https://assets.nextleap.app/submissions/LIP3-DatePlanningAssistant-f4390a7a-a0fc-4a2c-84fb-96f0c40940dd.pdf",
+                            tags: ["Lifestyle", "Planning"],
+                            summary: "Concept and UX design of a Date Planning AI Assistant feature for dating apps, focused on streamlining planning and coordination.",
+                            shortDescription: "Hinge Date Planning Assistant"
+                        },
+                        {
+                            title: "Case Study",
                             link: "https://assets.nextleap.app/submissions/CaseStudyCreditonUPImarketinIndia1-7fc1db7c-830e-480d-a572-1e3da8a3d05f.pdf",
                             tags: ["FinTech", "UPI"],
                             summary: "Case study on the Credit on UPI market in India, analyzing growth, value propositions, and trends in credit services.",
-                            shortDescription: "UPI market credit analysis"
+                            shortDescription: "Credit on UPI market in India"
                         }
                     ].map((project, index) => (
                         <motion.a
