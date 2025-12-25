@@ -34,6 +34,38 @@ const locations = [
 
 const Travel = () => {
     const [selectedLocation, setSelectedLocation] = useState(null);
+    const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+
+    const openLightbox = (index) => {
+        setSelectedImageIndex(index);
+    };
+
+    const closeLightbox = () => {
+        setSelectedImageIndex(null);
+    };
+
+    const nextImage = () => {
+        if (!selectedLocation || !selectedLocation.images) return;
+        setSelectedImageIndex((prev) => (prev + 1) % selectedLocation.images.length);
+    };
+
+    const prevImage = () => {
+        if (!selectedLocation || !selectedLocation.images) return;
+        setSelectedImageIndex((prev) => (prev - 1 + selectedLocation.images.length) % selectedLocation.images.length);
+    };
+
+    React.useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (selectedImageIndex === null) return;
+
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+            if (e.key === 'Escape') closeLightbox();
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [selectedImageIndex, selectedLocation]);
 
     return (
         <section className="travel-section" id="travel">
@@ -108,7 +140,7 @@ const Travel = () => {
                             <div className="modal-images">
                                 {selectedLocation.images ? (
                                     selectedLocation.images.map((img, i) => (
-                                        <div key={i} className="modal-img-placeholder">
+                                        <div key={i} className="modal-img-placeholder" onClick={() => openLightbox(i)} style={{ cursor: 'pointer' }}>
                                             <img src={img} alt={`${selectedLocation.name} ${i + 1}`} />
                                         </div>
                                     ))
@@ -122,6 +154,24 @@ const Travel = () => {
                                 )}
                             </div>
                         </div>
+                    )}
+                </div>
+            </div>
+
+            {/* Lightbox Overlay */}
+            <div className={`lightbox-overlay ${selectedImageIndex !== null ? 'active' : ''}`} onClick={closeLightbox}>
+                <button className="lightbox-close-btn" onClick={closeLightbox}>&times;</button>
+                <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+                    {selectedLocation && selectedLocation.images && selectedImageIndex !== null && (
+                        <>
+                            <button className="lightbox-nav-btn lightbox-prev" onClick={prevImage}>&#10094;</button>
+                            <img
+                                src={selectedLocation.images[selectedImageIndex]}
+                                alt={`Full screen view ${selectedImageIndex + 1}`}
+                                className="lightbox-image"
+                            />
+                            <button className="lightbox-nav-btn lightbox-next" onClick={nextImage}>&#10095;</button>
+                        </>
                     )}
                 </div>
             </div>
