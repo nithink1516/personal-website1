@@ -16,6 +16,10 @@ import gokarna2 from '../assets/travel/gokarna/gokarna2.jpg';
 import gokarna3 from '../assets/travel/gokarna/gokarna3.jpg';
 import gokarna4 from '../assets/travel/gokarna/gokarna4.jpg';
 import gokarna5 from '../assets/travel/gokarna/gokarna5.jpg';
+import gokarna6 from '../assets/travel/gokarna/gokarna6.jpg';
+import gokarna7 from '../assets/travel/gokarna/gokarna7.jpg';
+import gokarna8 from '../assets/travel/gokarna/gokarna8.jpg';
+import gokarna9 from '../assets/travel/gokarna/gokarna9.jpg';
 
 const INDIA_TOPO_JSON = "/india-states.json";
 
@@ -32,7 +36,7 @@ const locations = [
         name: "Gokarna",
         coordinates: [74.3188, 14.5479],
         description: "Serene beaches and temples.",
-        images: [gokarna1, gokarna2, gokarna3, gokarna4, gokarna5]
+        images: [gokarna1, gokarna2, gokarna3, gokarna4, gokarna5, gokarna6, gokarna7, gokarna8, gokarna9]
     },
     { name: "Bellary", coordinates: [76.9214, 15.1394], description: "Historical significance." },
     { name: "Bangalore", coordinates: [77.5946, 12.9716], description: "The Silicon Valley of India." },
