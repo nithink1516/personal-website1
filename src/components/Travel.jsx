@@ -11,6 +11,12 @@ import mumbai3 from '../assets/travel/mumbai/mumbai3.jpg';
 import mumbai4 from '../assets/travel/mumbai/mumbai4.jpg';
 import mumbai5 from '../assets/travel/mumbai/mumbai5.jpg';
 
+import gokarna1 from '../assets/travel/gokarna/gokarna1.jpg';
+import gokarna2 from '../assets/travel/gokarna/gokarna2.jpg';
+import gokarna3 from '../assets/travel/gokarna/gokarna3.jpg';
+import gokarna4 from '../assets/travel/gokarna/gokarna4.jpg';
+import gokarna5 from '../assets/travel/gokarna/gokarna5.jpg';
+
 const INDIA_TOPO_JSON = "/india-states.json";
 
 const locations = [
@@ -22,7 +28,12 @@ const locations = [
         description: "The city of dreams.",
         images: [mumbai1, mumbai2, mumbai3, mumbai4, mumbai5]
     },
-    { name: "Gokarna", coordinates: [74.3188, 14.5479], description: "Serene beaches and temples." },
+    {
+        name: "Gokarna",
+        coordinates: [74.3188, 14.5479],
+        description: "Serene beaches and temples.",
+        images: [gokarna1, gokarna2, gokarna3, gokarna4, gokarna5]
+    },
     { name: "Bellary", coordinates: [76.9214, 15.1394], description: "Historical significance." },
     { name: "Bangalore", coordinates: [77.5946, 12.9716], description: "The Silicon Valley of India." },
     { name: "Wayanad", coordinates: [76.083, 11.605], description: "Nature's tranquil abode." },
