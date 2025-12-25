@@ -12,6 +12,11 @@ const locations = [
     { name: "Gokarna", coordinates: [74.3188, 14.5479], description: "Serene beaches and temples." },
     { name: "Bellary", coordinates: [76.9214, 15.1394], description: "Historical significance." },
     { name: "Bangalore", coordinates: [77.5946, 12.9716], description: "The Silicon Valley of India." },
+    { name: "Wayanad", coordinates: [76.083, 11.605], description: "Nature's tranquil abode." },
+    { name: "Hampi", coordinates: [76.460, 15.335], description: "Ruins of the Vijayanagara Empire." },
+    { name: "Sriharikota", coordinates: [80.210, 13.742], description: "India's Spaceport." },
+    { name: "Tirupati", coordinates: [79.420, 13.636], description: "Spiritual capital of Andhra Pradesh." },
+    { name: "Honnavar", coordinates: [74.444, 14.280], description: "Coastal beauty and backwaters." },
 ];
 
 const Travel = () => {
