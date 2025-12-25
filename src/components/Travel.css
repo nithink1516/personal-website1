@@ -1,0 +1,145 @@
+.travel-section {
+    padding: 4rem 2rem;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.travel-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Marker Animation */
+.marker-circle {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.marker-circle:hover {
+    transform: scale(1.5);
+    fill: var(--accent-secondary) !important;
+}
+
+.marker-text {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 600;
+    pointer-events: none;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Modal/Overlay */
+.location-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.location-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.location-modal {
+    background: rgba(22, 22, 22, 0.8);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.location-modal-overlay.active .location-modal {
+    transform: translateY(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: var(--accent-primary);
+}
+
+.modal-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--accent-primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.modal-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.modal-img-placeholder {
+    width: 100%;
+    height: 100px;
+    background: #333;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.8rem;
+    overflow: hidden;
+}
+
+.modal-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.modal-img-placeholder:hover img {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        height: 400px;
+    }
+}
